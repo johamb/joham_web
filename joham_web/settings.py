@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '23g)gq!dcgztowxfv%27vq03+qp(au#u-c=d+%5&466(sy%+6f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['joham-web.azurewebsites.net']
 
 
 # Application definition
