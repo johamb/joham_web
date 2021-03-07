@@ -9,8 +9,8 @@ services:
       - traefik.http.routers.joham-web.rule=Host(`joham.dev`)
       - traefik.http.routers.joham-web.entrypoints=websecure
       - traefik.http.routers.joham-web.tls=true
-#    networks:
-#      - traefik
-#networks:
-#  traefik:
-#    external: true
+    networks:
+      - traefik
+networks:
+  traefik:
+    external: true
