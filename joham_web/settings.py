@@ -28,7 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'joham-web.azurewebsites.net',
     'localhost',
-    'joham.dev'
+    'joham.dev',
+    'www.joham.dev'
     ]
 
 

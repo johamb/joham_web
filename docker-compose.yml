@@ -6,7 +6,7 @@ services:
       context: .
     labels:
       - traefik.enable=true
-      - traefik.http.routers.joham-web.rule=Host(`joham.dev`)
+      - "traefik.http.routers.joham-web.rule=Host(`joham.dev`, `www.joham.dev`)"
       - traefik.http.routers.joham-web.entrypoints=websecure
       - traefik.http.routers.joham-web.tls=true
     networks:
