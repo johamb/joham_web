@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  joham_web:
+    container_name: joham_web
+    build: 
+      context: .
+      labels:
+        - traefik.enable=true
+        - traefik.http.routers.bitwarden.rule=Host(`joham.dev`)
+        - traefik.http.routers.bitwarden.entrypoints=websecure
+        - traefik.http.routers.bitwarden.tls=true
