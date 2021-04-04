@@ -1,6 +1,6 @@
 version: "3.9"
 services:
-  joham_web:
+  django:
     container_name: joham_web
     build: 
       context: .
