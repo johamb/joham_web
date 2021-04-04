@@ -7,8 +7,8 @@ RUN pip install -r requirements.txt
 COPY src/ /app/
 
 COPY .env /.env
-RUN ( set -a; . /.env; set +a; python manage.py collectstatic --noinput)
-RUN rm /.env
+# RUN ( set -a; . /.env; set +a; python manage.py collectstatic --noinput)
+# RUN rm /.env
 
 COPY gunicorn_settings.py /gunicorn_settings.py
 
