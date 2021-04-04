@@ -4,6 +4,8 @@ services:
     container_name: joham_web
     build: 
       context: .
+    ports:
+      - "8000:8000"
     labels:
       - traefik.enable=true
       - "traefik.http.routers.joham-web.rule=Host(`joham.dev`, `www.joham.dev`)"
