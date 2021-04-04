@@ -11,19 +11,17 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '23g)gq!dcgztowxfv%27vq03+qp(au#u-c=d+%5&466(sy%+6f'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# From .env
+SECRET_KEY = os.environ['SECRET_KEY']
+DEBUG = os.environ['DEBUG']
+ADMIN_ENABLED = os.environ['ADMIN_ENABLED']
 
 ALLOWED_HOSTS = [
     'joham-web.azurewebsites.net',
