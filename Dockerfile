@@ -16,4 +16,4 @@ COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
-CMD ["gunicorn", "-c", "/gunicorn_settings.py", "-e", "DJANGO_SETTINGS_MODULE=config.settings" "wsgi:application"]
+CMD ["gunicorn", "-c", "/gunicorn_settings.py", "-e", "DJANGO_SETTINGS_MODULE=config.settings", "wsgi:application"]
